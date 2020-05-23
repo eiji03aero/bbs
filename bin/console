@@ -1,14 +1,19 @@
 #!/usr/bin/env ruby
 
+lib_path = File.expand_path('../lib', __dir__)
+$LOAD_PATH.unshift(lib_path)
+
 require "bundler/setup"
+require "irb"
 require "bbs"
 
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
+$user_repo = UserRepository.new
+$user = User.new(name: "eiji")
 
-# (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
-# Pry.start
+$post_repo = PostRepository.new
+$post = Post.new(user_id: 1, board_id: 1, content: "hoge")
 
-require "irb"
+$board_repo = BoardRepository.new
+$board = Board.new(name: "nerds")
+
 IRB.start(__FILE__)

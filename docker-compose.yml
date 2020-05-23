@@ -3,8 +3,14 @@ version: '3.7'
 services:
   bbs:
     image: ruby:2.7.1-buster
+    environment:
+      BUNDLE_APP_CONFIG: /app/.bundle
     working_dir: /app
     volumes:
-       - .:/app
+       - v-sync-bbs:/app
     tty: true
     command: /bin/bash
+
+volumes:
+  v-sync-bbs:
+    external: true

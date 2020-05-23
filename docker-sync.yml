@@ -2,7 +2,7 @@ version: "2"
 options:
   verbose: false
 syncs:
-  bbs:
+  v-sync-bbs:
     src: '.'
     sync_excludes: ['.git']
     notify_terminal: false
