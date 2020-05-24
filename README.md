@@ -6,8 +6,6 @@
   - ddd
     - https://magazine.rubyist.net/articles/0056/0056-hanami.html
     - https://github.com/paulrayner/ddd_sample_app_ruby
-  - add load path
-    - https://stackoverflow.com/questions/837123/adding-a-directory-to-load-path-ruby
   - when install
     - bundle config set path 'vendor/bundle'
 ```
@@ -15,15 +13,10 @@
 # Todo
 
 ```
-- Validator
-- user
-  - validation
-- board
-  - validation
-- post
-  - validation
-- json_db
-  - Persistence::JSONDB::Client
+- seed data
+  - users, boards, posts
+  - faker
+- relationships
 - service
 ```
 

@@ -11,7 +11,7 @@ class Validator
 
   def execute(obj)
     validations
-      .map { |v| execute_validation(obj, v)}
+      .map { |v| execute_validation(obj, v) }
       .flatten
       .compact
   end

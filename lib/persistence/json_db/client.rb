@@ -54,7 +54,7 @@ module Persistence
 
         def latest_index
           ids = read
-            .map { |r| r.id }
+            .map(&:id)
           return 1 if ids.length <= 0
 
           ids.max + 1
