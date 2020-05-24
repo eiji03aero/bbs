@@ -4,16 +4,17 @@ module Validatable
   end
 
   module ClassMethods
-    def validates(name, opts)
-      validations.push([name, opts])
+    def validator
+      @validator ||= Validator.new
     end
 
-    def validations
-      @@validations ||= []
+    def validates(name, opts)
+      validator.add(name, opts)
     end
   end
 
   def validate
+    self.class.validator.execute
   end
 
   def errors

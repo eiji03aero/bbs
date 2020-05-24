@@ -15,12 +15,17 @@
 # Todo
 
 ```
+- Validator
 - user
   - validation
 - board
   - validation
 - post
   - validation
+- json_db
+  - JSONDB::Client
+    - JSONDB::Query
+    - JSONDB::Command
 - service
 ```
 

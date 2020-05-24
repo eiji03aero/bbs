@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib_path)
 
 require "bundler/setup"
 require "irb"
-require "bbs"
+require_relative "../app/main"
 
 $user_repo = UserRepository.new
 $user = User.new(name: "eiji")

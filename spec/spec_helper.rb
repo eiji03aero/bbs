@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "bbs"
+require_relative "../app/main"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
