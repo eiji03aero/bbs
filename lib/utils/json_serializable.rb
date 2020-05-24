@@ -7,10 +7,10 @@ module JSONSerializable
 
   module ClassMethods
     def json_create(obj)
+      # Since JSON.load's create_additions and symbolize_names cannot be used
+      # together, need to manually symbolize keys for easy access
       object = obj
-        .to_a
-        .map { |arr| [arr[0].to_sym, arr[1]] }
-        .to_h
+        .transform_keys(&:to_sym)
       new(object)
     end
   end

@@ -1,5 +1,8 @@
 class User
   include JSONSerializable
+  include Validatable
+
+  validates :name, presence: true
 
   attr_accessor :id, :name
 
