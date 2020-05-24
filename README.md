@@ -23,9 +23,7 @@
 - post
   - validation
 - json_db
-  - JSONDB::Client
-    - JSONDB::Query
-    - JSONDB::Command
+  - Persistence::JSONDB::Client
 - service
 ```
 

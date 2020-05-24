@@ -1,5 +1,4 @@
-class Post
-  include JSONSerializable
+class Post < Entity::Base
 
   attr_accessor :id, :user_id, :board_id, :content
 

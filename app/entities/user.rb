@@ -1,7 +1,4 @@
-class User
-  include JSONSerializable
-  include Validatable
-
+class User < Entity::Base
   validates :name, presence: true
 
   attr_accessor :id, :name

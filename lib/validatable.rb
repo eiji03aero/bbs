@@ -14,7 +14,9 @@ module Validatable
   end
 
   def validate
-    self.class.validator.execute
+    result = self.class.validator.execute(self)
+    errors.concat(result)
+    result.empty?
   end
 
   def errors

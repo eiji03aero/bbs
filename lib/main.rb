@@ -1,5 +1,6 @@
 require "json_serializable"
 
+require "entity"
 require "persistence"
 require "repository"
 

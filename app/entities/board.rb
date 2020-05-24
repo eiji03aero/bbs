@@ -1,6 +1,4 @@
-class Board
-  include JSONSerializable
-
+class Board < Entity::Base
   attr_accessor :id, :name
 
   def initialize(args)
