@@ -10,5 +10,5 @@
 # rspec failure tracking
 .rspec_status
 
-/data/*.json
+/data/tables/*.json
 /vendor/bundle/

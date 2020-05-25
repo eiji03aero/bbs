@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
 
-lib_path = File.expand_path('../lib', __dir__)
-$LOAD_PATH.unshift(lib_path)
-
 require "bundler/setup"
 require "irb"
 require_relative "../app/main"

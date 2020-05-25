@@ -10,3 +10,7 @@ task :default => :spec
 task :guard do
   system("bundle exec guard")
 end
+
+task :seed do
+  require_relative "./data/seed.rb"
+end

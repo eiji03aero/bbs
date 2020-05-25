@@ -2,9 +2,9 @@ require "json"
 
 module Persistence
   module JSONDB
-    DATA_DIR = File.expand_path('../../../data', __dir__)
-
     module Client
+      TABLE_DIR = File.expand_path('../../../data/tables', __dir__)
+
       def self.included(o)
         o.extend(ClassMethods)
       end
@@ -60,7 +60,7 @@ module Persistence
 
       private
         def file_path
-          File.join(DATA_DIR, table_name+".json")
+          File.join(TABLE_DIR, table_name+".json")
         end
 
         def latest_index
