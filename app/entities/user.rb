@@ -4,9 +4,8 @@ class User < Entity::Base
 
   attr_accessor :id, :name
 
-  def initialize(args)
-    @id = args[:id]
-    @name = args[:name]
+  def initialize(attrs)
+    set_attributes(attrs)
   end
 
   def serialize

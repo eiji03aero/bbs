@@ -13,9 +13,11 @@
 # Todo
 
 ```
-- service
+- foreign key restriction
+  - make sure foreign key referenced does exist
 - refactor repeating codes like query::where,limit
   - https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/http/request.rb#L50
+- create tui
 ```
 
 # Apis
@@ -50,8 +52,8 @@
 - Post
   - properties
     - id int serial not null
-    - user_id int serial not null
-    - board_id int serial not null
+    - user_id int not null
+    - board_id int not null
     - content text default ""
 - PostRepository
   - methods
