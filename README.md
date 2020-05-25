@@ -13,10 +13,6 @@
 # Todo
 
 ```
-- seed data
-  - users, boards, posts
-  - faker
-- relationships
 - service
 - refactor repeating codes like query::where,limit
   - https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/http/request.rb#L50
@@ -37,23 +33,28 @@
   - properties
     - id int serial not null
     - name string not null
+- UserRepository
   - methods
-    - #posts () => Post[]
-    - #boards () => Board[]
+    - #posts_for (User) => Post[]
+    - #boards_for (User) => Board[]
+
 - Board
   - properties
     - id int serial not null
     - name string not null
+- BoardRepository
   - methods
-    - #users () => User[]
-    - #posts () => Post[]
+    - #users_for (Board) => User[]
+    - #posts_for (Board) => Post[]
+
 - Post
   - properties
     - id int serial not null
     - user_id int serial not null
     - board_id int serial not null
     - content text default ""
+- PostRepository
   - methods
-    - #user () => User
-    - #board () => Board
+    - #user_for () => User
+    - #board_for () => Board
 ```

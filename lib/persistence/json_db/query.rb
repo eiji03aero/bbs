@@ -1,5 +1,3 @@
-require "persistence/json_db/query/execute"
-
 module Persistence
   module JSONDB
     module Query
