@@ -7,13 +7,4 @@ require "bundler/setup"
 require "irb"
 require_relative "../app/main"
 
-$user_repo = UserRepository.new
-$user = User.new(name: "eiji")
-
-$post_repo = PostRepository.new
-$post = Post.new(user_id: 1, board_id: 1, content: "hoge")
-
-$board_repo = BoardRepository.new
-$board = Board.new(name: "nerds")
-
 IRB.start(__FILE__)

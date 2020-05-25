@@ -18,6 +18,8 @@
   - faker
 - relationships
 - service
+- refactor repeating codes like query::where,limit
+  - https://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/http/request.rb#L50
 ```
 
 # Apis

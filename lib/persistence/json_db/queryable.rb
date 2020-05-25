@@ -24,6 +24,14 @@ module Persistence
       def all
         read
       end
+
+      def first
+        all.first
+      end
+
+      def last
+        all.last
+      end
     end
   end
 end
