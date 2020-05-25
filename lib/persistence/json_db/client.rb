@@ -40,10 +40,21 @@ module Persistence
         write([])
       end
 
-      def insert(data)
-        data.id = latest_index
+      def insert_record(entity)
         records = read
-        records.push(data)
+          .push(entity)
+        write(records)
+      end
+
+      def update_record(entity)
+        records = read
+          .map { |r| r.id == entity.id ? entity : r }
+        write(records)
+      end
+
+      def delete_record(entity)
+        records = read
+          .filter { |r| r.id != entity.id }
         write(records)
       end
 
