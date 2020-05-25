@@ -13,6 +13,10 @@
 # Todo
 
 ```
+- update repository
+  - add running validation before crud
+  - update
+  - delete
 - seed data
   - users, boards, posts
   - faker

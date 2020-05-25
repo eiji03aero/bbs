@@ -33,7 +33,7 @@ RSpec.describe Validator do
       result = subject.execute(object)
 
       expect(result.length).to eq 1
-      expect(result.first).to be_instance_of(StandardError)
+      expect(result.first).to be_kind_of(Exception)
     end
   end
 end

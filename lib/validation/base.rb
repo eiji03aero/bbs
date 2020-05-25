@@ -10,7 +10,7 @@ module Validation
     end
 
     def execute
-      raise StandardError.new "#execute method unimplemented"
+      raise NotImplementedError.new "#execute method unimplemented"
     end
 
     protected
@@ -19,7 +19,7 @@ module Validation
       end
 
       def create_error(msg)
-        StandardError.new <<~EOF
+        ValidationFailed.new <<~EOF
           Validation error: #{object.class.name} attr_name=#{attr_name} validation_value=#{validation_value}
           error: #{msg}
         EOF

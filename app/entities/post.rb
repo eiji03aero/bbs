@@ -1,4 +1,8 @@
 class Post < Entity::Base
+  validates :id, presence: true
+  validates :user_id, presence: true
+  validates :board_id, presence: true
+  validates :content, presence: true, max_length: 250
 
   attr_accessor :id, :user_id, :board_id, :content
 

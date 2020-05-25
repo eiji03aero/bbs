@@ -1,4 +1,7 @@
 class Board < Entity::Base
+  validates :id, presence: true
+  validates :name, presence: true
+
   attr_accessor :id, :name
 
   def initialize(args)

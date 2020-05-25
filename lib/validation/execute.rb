@@ -15,8 +15,10 @@ module Validation
       case name
       when :presence
         Presence
+      when :max_length
+        MaxLength
       else
-        raise StandardError.new "unknown validation type #{name}"
+        raise ArgumentError.new "unknown validation type #{name}"
       end
     end
   end

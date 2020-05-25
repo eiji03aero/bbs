@@ -1,4 +1,4 @@
-RSpec.describe Validation::Presence do
+RSpec.describe Validation::MaxLength do
   class TestClass
     attr_accessor :name
 
@@ -14,19 +14,13 @@ RSpec.describe Validation::Presence do
           object_arg: {
             name: "hoge"
           },
-          validation_value: true
+          validation_value: 5
         },
-        {
-          object_arg: {
-            name: nil
-          },
-          validation_value: false
-        }
       ]
 
       tests.each do |t|
         object = TestClass.new(t[:object_arg])
-        subject = Validation::Presence.new(
+        subject = Validation::MaxLength.new(
           object: object,
           attr_name: :name,
           validation_value: t[:validation_value],
@@ -42,19 +36,13 @@ RSpec.describe Validation::Presence do
           object_arg: {
             name: "hoge"
           },
-          validation_value: false
+          validation_value: 2
         },
-        {
-          object_arg: {
-            name: nil
-          },
-          validation_value: true
-        }
       ]
 
       tests.each do |t|
         object = TestClass.new(t[:object_arg])
-        subject = Validation::Presence.new(
+        subject = Validation::MaxLength.new(
           object: object,
           attr_name: :name,
           validation_value: t[:validation_value],
